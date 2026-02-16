@@ -15,7 +15,25 @@ function App() {
     marks: "",
     id: uuidv4(),
   });
+  let [filter, setFilter] = useState("all");
 
+  function showAll() {
+    setFilter("all");
+  }
+
+  function showTop() {
+    setFilter("top");
+  }
+
+  let filteredStudents = student;
+
+  if (filter === "top") {
+    filteredStudents = student.filter((s) => Number(s.marks) >= 80);
+  }
+
+  if (filter === "fail") {
+    filteredStudents = student.filter((s) => Number(s.marks) < 34);
+  }
   function handleChange(e) {
     let { name, value } = e.target;
 
@@ -46,8 +64,12 @@ function App() {
         data={newStudent}
         createStudent={createStudent}
       />
-      <FilterButtons />
-      <StudentList data={student} delStudent={delStudent} />
+      <FilterButtons showAll={showAll} showTop={showTop} />
+      <StudentList
+        data={filteredStudents}
+        delStudent={delStudent}
+        filter={filter}
+      />
     </>
   );
 }

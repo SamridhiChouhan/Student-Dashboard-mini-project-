@@ -1,9 +1,10 @@
-function FilterButtons() {
+function FilterButtons(props) {
+  // console.log(props.showAll);
   return (
     <>
       <div className="filter-btns">
-        <button>Show All</button>
-        <button>Top students</button>
+        <button onClick={props.showAll}>Show All</button>
+        <button onClick={props.showTop}>Top students</button>
       </div>
     </>
   );
