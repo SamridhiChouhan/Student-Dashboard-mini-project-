@@ -1,5 +1,5 @@
 function Form(props) {
-  console.log(props);
+  // console.log(props);
   return (
     <>
       <h3>Add Student</h3>
