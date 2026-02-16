@@ -8,12 +8,38 @@ import FilterButtons from "./FilterButtons";
 import StudentList from "./StudentList";
 
 function App() {
+  let [student, setStudent] = useState([]);
+  let [newStudent, setNewStudent] = useState({
+    name: "",
+    marks: "",
+  });
+
+  function handleChange(e) {
+    let { name, value } = e.target;
+
+    setNewStudent({
+      ...newStudent,
+      [name]: value,
+    });
+  }
+  function createStudent() {
+    setStudent([...student, { newStudent }]);
+    setNewStudent({
+      name: "",
+      marks: "",
+    });
+  }
+
   return (
     <>
       <Header />
-      <Form />
+      <Form
+        handleChange={handleChange}
+        data={newStudent}
+        createStudent={createStudent}
+      />
       <FilterButtons />
-      <StudentList />
+      <StudentList data={student} />
     </>
   );
 }

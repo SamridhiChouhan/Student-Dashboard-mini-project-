@@ -1,9 +1,13 @@
 import StudentCard from "./StudentCard";
 
-function StudentList() {
+function StudentList(props) {
+  // consstudents.data);
+  let students = props.data;
   return (
     <>
-      <StudentCard />
+      {students.map((student, idx) => {
+        return <StudentCard data={student} key={idx} />;
+      })}
     </>
   );
 }
