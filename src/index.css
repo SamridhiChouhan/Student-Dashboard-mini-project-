@@ -4,3 +4,9 @@
   /* border: none; */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+body {
+  background-color: #eef1f8;
+  height: 100vh;
+  width: 100vw;
+}

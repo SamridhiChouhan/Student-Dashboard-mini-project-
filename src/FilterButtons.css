@@ -1,0 +1,30 @@
+.filter-btns {
+  display: flex;
+  justify-self: center;
+}
+
+.btn-top,
+.btn-all {
+  padding: 0.35rem 3rem;
+  margin: 0rem 0.5rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  font-weight: 500;
+}
+
+.active-btn {
+  background-color: #4165b1;
+  color: white;
+  border: none;
+  font-weight: 500;
+  padding: 0.35rem 3rem;
+  margin: 0rem 0.5rem;
+  border-radius: 0.2rem;
+}
+
+.btn-top i,
+.active-btn i {
+  color: gold;
+  font-size: large;
+}

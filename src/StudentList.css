@@ -1,0 +1,7 @@
+.list {
+  width: 50rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-self: center;
+}

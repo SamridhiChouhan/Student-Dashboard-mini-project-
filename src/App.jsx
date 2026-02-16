@@ -64,7 +64,7 @@ function App() {
         data={newStudent}
         createStudent={createStudent}
       />
-      <FilterButtons showAll={showAll} showTop={showTop} />
+      <FilterButtons showAll={showAll} showTop={showTop} filter={filter} />
       <StudentList
         data={filteredStudents}
         delStudent={delStudent}

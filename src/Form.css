@@ -1,0 +1,33 @@
+.form-panel {
+  background-color: white;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  margin: 1rem;
+  padding: 1rem;
+  padding-bottom: 0;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+}
+
+.inputs {
+  margin: 1rem;
+}
+.inputs input {
+  height: 1.5rem;
+}
+
+.form button {
+  height: 1.9rem;
+  color: white;
+  background-color: #4165b1;
+  border: 1px solid #4165b1;
+  border-radius: 0.2rem;
+  font-weight: 600;
+  padding: 0rem 1.5rem;
+  margin: 0 1rem;
+}
