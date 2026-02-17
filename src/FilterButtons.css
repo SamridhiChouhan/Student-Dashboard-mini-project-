@@ -28,3 +28,10 @@
   color: gold;
   font-size: large;
 }
+
+@media (max-width: 460px) {
+  .btn-top,
+  .btn-all {
+    padding: 0.35rem 1rem;
+  }
+}
